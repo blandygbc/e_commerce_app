@@ -1,6 +1,7 @@
 # e_commerce_app
 
-A new Flutter project.
+A tutorial made by The Flutter Way.
+[You can find here](https://github.com/abuanwar072/E-commerce-Complete-Flutter-UI)
 
 ## Getting Started
 
