@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:shop_app/size_config.dart';
 
+//Text Constants
 const kPrimaryColor = Color(0xFFFF7643);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(
@@ -11,12 +12,25 @@ const kPrimaryGradientColor = LinearGradient(
 const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF757575);
 const kFadedColor = Color(0xDDD8D8D8);
+const kTextHeading = Color(0xFF8B8B8B);
+const kSocialIconBackground = Color(0xFFF5F6F9);
 
+//Config Constants
 const kAnimationDuration = Duration(milliseconds: 200);
 
+//Image Constants
 const kImageSplash1 = "assets/images/splash_1.png";
 const kImageSplash2 = "assets/images/splash_2.png";
 const kImageSplash3 = "assets/images/splash_3.png";
+const kImageLoginSuccess = "assets/images/success.png";
+
+//Icons Constants
+const iconMail = "assets/icons/Mail.svg";
+const iconLock = "assets/icons/Lock.svg";
+const iconError = "assets/icons/Error.svg";
+const iconFacebook = "assets/icons/facebook-2.svg";
+const iconGoole = "assets/icons/google-icon.svg";
+const iconTwitter = "assets/icons/twitter.svg";
 
 /*final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),

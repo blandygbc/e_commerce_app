@@ -1,17 +1,18 @@
 import 'package:e_commerce_app/components/default_button.dart';
 import 'package:e_commerce_app/constants.dart';
+import 'package:e_commerce_app/screens/sign_in/sign_in_screen.dart';
 import 'package:e_commerce_app/screens/splash/components/splash_content.dart';
 import 'package:e_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 
-class Body extends StatefulWidget {
-  Body({Key? key}) : super(key: key);
+class SplashBody extends StatefulWidget {
+  SplashBody({Key? key}) : super(key: key);
 
   @override
-  _BodyState createState() => _BodyState();
+  _SplashBodyState createState() => _SplashBodyState();
 }
 
-class _BodyState extends State<Body> {
+class _SplashBodyState extends State<SplashBody> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
@@ -67,7 +68,9 @@ class _BodyState extends State<Body> {
                         horizontal: getProportionateScreenWidth(20)),
                     child: DefaultButton(
                       text: "Continue",
-                      press: () => {},
+                      press: () => {
+                        Navigator.of(context).pushNamed(SingInScreen.routeName),
+                      },
                     ),
                   ),
                   Spacer()
