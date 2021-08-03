@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 //import 'package:shop_app/size_config.dart';
 
@@ -31,13 +32,16 @@ const iconError = "assets/icons/Error.svg";
 const iconFacebook = "assets/icons/facebook-2.svg";
 const iconGoole = "assets/icons/google-icon.svg";
 const iconTwitter = "assets/icons/twitter.svg";
+const iconUser = "assets/icons/User.svg";
+const iconPhone = "assets/icons/Phone.svg";
+const iconLocationPoint = "assets/icons/Location point.svg";
 
-/*final headingStyle = TextStyle(
+final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),
   fontWeight: FontWeight.bold,
   color: Colors.black,
   height: 1.5,
-);*/
+);
 
 const defaultDuration = Duration(milliseconds: 250);
 
@@ -53,17 +57,17 @@ const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
 
-/*final otpInputDecoration = InputDecoration(
+final otpInputDecoration = InputDecoration(
   contentPadding:
       EdgeInsets.symmetric(vertical: getProportionateScreenWidth(15)),
   border: outlineInputBorder(),
   focusedBorder: outlineInputBorder(),
   enabledBorder: outlineInputBorder(),
-);*/
+);
 
-/*OutlineInputBorder outlineInputBorder() {
+OutlineInputBorder outlineInputBorder() {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(getProportionateScreenWidth(15)),
     borderSide: BorderSide(color: kTextColor),
   );
-}*/
+}

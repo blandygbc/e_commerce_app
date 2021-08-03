@@ -1,24 +1,24 @@
+import 'package:e_commerce_app/components/custom_suffix_icon.dart';
 import 'package:e_commerce_app/components/default_button.dart';
-import 'package:e_commerce_app/screens/forgot_password/forgot_password_screen.dart';
-import 'package:e_commerce_app/screens/login_success/login_success_screen.dart';
+import 'package:e_commerce_app/components/form_error.dart';
+import 'package:e_commerce_app/screens/complete_profile/complete_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
-import '../../../components/custom_suffix_icon.dart';
-import '../../../components/form_error.dart';
 
-class SignForm extends StatefulWidget {
-  SignForm({Key? key}) : super(key: key);
+class SignUpForm extends StatefulWidget {
+  SignUpForm({Key? key}) : super(key: key);
 
   @override
   _SignFormState createState() => _SignFormState();
 }
 
-class _SignFormState extends State<SignForm> {
+class _SignFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   String? email;
   String? password;
+  String? confirmPassword;
   bool remember = false;
   final List<String> errors = [];
   @override
@@ -43,7 +43,7 @@ class _SignFormState extends State<SignForm> {
                 errorMessage: kEmailNullError,
               ),
               SizedBox(
-                height: getProportionateScreenHeight(20),
+                height: getProportionateScreenHeight(30),
               ),
               buildFormField(
                 isObscure: true,
@@ -55,42 +55,28 @@ class _SignFormState extends State<SignForm> {
                 errorMessage: kPassNullError,
               ),
               SizedBox(
-                height: getProportionateScreenHeight(10),
+                height: getProportionateScreenHeight(30),
               ),
-              Row(
-                children: [
-                  Checkbox(
-                    value: remember,
-                    activeColor: kPrimaryColor,
-                    onChanged: (value) {
-                      setState(() {
-                        remember = value!;
-                      });
-                    },
-                  ),
-                  Text("Remember me"),
-                  Spacer(),
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(
-                        context, ForgotPasswordScreen.routeName),
-                    child: Text(
-                      "Forgot Password",
-                      style: TextStyle(decoration: TextDecoration.underline),
-                    ),
-                  )
-                ],
+              buildFormField(
+                isObscure: true,
+                onSaveInput: "ConfirmPassword",
+                label: "Confirm Password",
+                hint: "Re-enter your password",
+                icon: iconLock,
+                iconHeight: 25.0,
+                errorMessage: kPassNullError,
               ),
               FormErrors(errors: errors),
               SizedBox(
-                height: getProportionateScreenHeight(20),
+                height: getProportionateScreenHeight(40),
               ),
               DefaultButton(
-                text: "Sing In",
+                text: "Continue",
                 press: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    Navigator.of(context)
-                        .pushNamed(LoginSuccessScreen.routeName);
+                    Navigator.pushNamed(
+                        context, CompleteProfileScreen.routeName);
                   }
                 },
               )
@@ -117,6 +103,8 @@ class _SignFormState extends State<SignForm> {
           email = newValue;
         } else if (identical(onSaveInput, "Password")) {
           password = newValue;
+        } else if (identical(onSaveInput, "ConfirmPassword")) {
+          confirmPassword = newValue;
         }
       },
       onChanged: (value) {
@@ -136,7 +124,14 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.remove(kShortPassError);
           });
+        } else if (identical(onSaveInput, "ConfirmPassword") &&
+            (identical(password, value)) &&
+            errors.contains(kMatchPassError)) {
+          setState(() {
+            errors.remove(kMatchPassError);
+          });
         }
+        if (identical(onSaveInput, "Password")) password = value;
         return null;
       },
       validator: (value) {
@@ -157,6 +152,13 @@ class _SignFormState extends State<SignForm> {
             !errors.contains(kShortPassError)) {
           setState(() {
             errors.add(kShortPassError);
+          });
+          return "";
+        } else if (identical(onSaveInput, "ConfirmPassword") &&
+            (!identical(password, value)) &&
+            !errors.contains(kMatchPassError)) {
+          setState(() {
+            errors.add(kMatchPassError);
           });
           return "";
         }

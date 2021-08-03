@@ -1,13 +1,12 @@
 import 'package:e_commerce_app/components/social_card.dart';
-import 'package:e_commerce_app/constants.dart';
-import 'package:e_commerce_app/screens/sign_in/components/sign_form.dart';
-import 'package:e_commerce_app/size_config.dart';
+import 'package:e_commerce_app/screens/sign_up/components/sign_up_form.dart';
 import 'package:flutter/material.dart';
 
-import 'no_account_text.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
 
-class SingInBody extends StatelessWidget {
-  const SingInBody({Key? key}) : super(key: key);
+class SingUpBody extends StatelessWidget {
+  const SingUpBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,27 +16,23 @@ class SingInBody extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: SizeConfig.screenHeight! * 0.04,
+              height: SizeConfig.screenHeight! * 0.01,
             ),
             Text(
-              "Welcome Back!",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: getProportionateScreenWidth(28),
-                fontWeight: FontWeight.bold,
-              ),
+              "Register Account!",
+              style: headingStyle,
             ),
             SizedBox(
               height: getProportionateScreenHeight(5),
             ),
             Text(
-              "Sign in with your email and password \nor continue with social media",
+              "Complete yours details or\n continue with social media",
               textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: SizeConfig.screenHeight! * 0.04,
+              height: SizeConfig.screenHeight! * 0.03,
             ),
-            SignForm(),
+            SignUpForm(),
             SizedBox(
               height: SizeConfig.screenHeight! * 0.06,
             ),
@@ -59,9 +54,12 @@ class SingInBody extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: getProportionateScreenHeight(30),
+              height: getProportionateScreenHeight(20),
             ),
-            NoAccountText(),
+            Text(
+              "By continuing you confurm that you agree \nwith our Term and Condition",
+              textAlign: TextAlign.center,
+            )
           ],
         ),
       ),

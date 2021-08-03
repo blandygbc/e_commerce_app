@@ -69,7 +69,7 @@ class _SplashBodyState extends State<SplashBody> {
                     child: DefaultButton(
                       text: "Continue",
                       press: () => {
-                        Navigator.of(context).pushNamed(SingInScreen.routeName),
+                        Navigator.of(context).pushNamed(SignInScreen.routeName),
                       },
                     ),
                   ),
