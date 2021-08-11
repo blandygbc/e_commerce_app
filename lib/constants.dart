@@ -15,6 +15,7 @@ const kTextColor = Color(0xFF757575);
 const kFadedColor = Color(0xDDD8D8D8);
 const kTextHeading = Color(0xFF8B8B8B);
 const kSocialIconBackground = Color(0xFFF5F6F9);
+const kAlertColor = Color(0xFFDD4848);
 
 //Config Constants
 const kAnimationDuration = Duration(milliseconds: 200);
@@ -35,6 +36,8 @@ const iconTwitter = "assets/icons/twitter.svg";
 const iconUser = "assets/icons/User.svg";
 const iconPhone = "assets/icons/Phone.svg";
 const iconLocationPoint = "assets/icons/Location point.svg";
+const iconBell = "assets/icons/Bell.svg";
+const iconCart = "assets/icons/Cart Icon.svg";
 
 final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),
