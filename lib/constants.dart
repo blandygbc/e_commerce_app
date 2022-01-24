@@ -16,6 +16,8 @@ const kFadedColor = Color(0xDDD8D8D8);
 const kTextHeading = Color(0xFF8B8B8B);
 const kSocialIconBackground = Color(0xFFF5F6F9);
 const kAlertColor = Color(0xFFDD4848);
+const kBannerColor = Color(0xFF4A3298);
+const kCategoriesBGColor = Color(0xFFFFFECDF);
 
 //Config Constants
 const kAnimationDuration = Duration(milliseconds: 200);
@@ -25,6 +27,8 @@ const kImageSplash1 = "assets/images/splash_1.png";
 const kImageSplash2 = "assets/images/splash_2.png";
 const kImageSplash3 = "assets/images/splash_3.png";
 const kImageLoginSuccess = "assets/images/success.png";
+const kImageBanner2 = "assets/images/Image Banner 2.png";
+const kImageBanner3 = "assets/images/Image Banner 3.png";
 
 //Icons Constants
 const iconMail = "assets/icons/Mail.svg";
