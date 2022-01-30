@@ -1,8 +1,7 @@
 import 'package:e_commerce_app/size_config.dart';
 import 'package:flutter/material.dart';
-//import 'package:shop_app/size_config.dart';
 
-//Text Constants
+//Colors Constants
 const kPrimaryColor = Color(0xFFFF7643);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(
@@ -18,6 +17,8 @@ const kSocialIconBackground = Color(0xFFF5F6F9);
 const kAlertColor = Color(0xFFDD4848);
 const kBannerColor = Color(0xFF4A3298);
 const kCategoriesBGColor = Color(0xFFFFFECDF);
+const kFavProductColor = Color(0xFFFF4848);
+const kNotFavProductColor = Color(0xFFD8DEE4);
 
 //Config Constants
 const kAnimationDuration = Duration(milliseconds: 200);
@@ -42,6 +43,7 @@ const iconPhone = "assets/icons/Phone.svg";
 const iconLocationPoint = "assets/icons/Location point.svg";
 const iconBell = "assets/icons/Bell.svg";
 const iconCart = "assets/icons/Cart Icon.svg";
+const iconHeart = "assets/icons/Heart Icon_2.svg";
 
 final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),
