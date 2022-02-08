@@ -44,6 +44,7 @@ const iconLocationPoint = "assets/icons/Location point.svg";
 const iconBell = "assets/icons/Bell.svg";
 const iconCart = "assets/icons/Cart Icon.svg";
 const iconHeart = "assets/icons/Heart Icon_2.svg";
+const iconStar = "assets/icons/Star Icon.svg";
 
 final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),
